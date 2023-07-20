@@ -1,22 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Menu = () => {
+type MenuPT = {
+  items: string[];
+};
+
+export const Menu = (props: MenuPT) => {
   return (
     <StyledMenu>
       <ul>
-        <li>
-          <a href={"#1"}>#home</a>
-        </li>
-        <li>
-          <a href={"#1"}>#skills</a>
-        </li>
-        <li>
-          <a href={"#1"}>#works</a>
-        </li>
-        <li>
-          <a href={"#1"}>#contacts</a>
-        </li>
+        {props.items.map((el) => (
+          <li>
+            <a href={"#1"}>{el}</a>
+          </li>
+        ))}
       </ul>
     </StyledMenu>
   );
