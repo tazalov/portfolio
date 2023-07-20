@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
+export type MenuItemT = {
+  id: number;
+  text: string;
+};
+
 type MenuPT = {
-  items: string[];
+  items: MenuItemT[];
 };
 
 export const Menu = (props: MenuPT) => {
@@ -10,8 +15,8 @@ export const Menu = (props: MenuPT) => {
     <StyledMenu>
       <ul>
         {props.items.map((el) => (
-          <li>
-            <a href={"#1"}>{el}</a>
+          <li key={el.id}>
+            <a href={"#1"}>{el.text}</a>
           </li>
         ))}
       </ul>
