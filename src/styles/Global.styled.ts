@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -29,6 +30,8 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: ${theme.colors.primaryBg};
+    color: ${theme.colors.primaryFont}
   }
   input,
   button,
@@ -65,5 +68,4 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: inherit;
     font-size: inherit;
   }
-
 `;

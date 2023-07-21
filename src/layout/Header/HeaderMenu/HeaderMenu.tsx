@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../styles/Theme";
+import { theme } from "../../../styles/Theme";
 
 export type MenuItemT = {
   id: number;
@@ -11,7 +11,7 @@ type MenuPT = {
   items: MenuItemT[];
 };
 
-export const Menu = (props: MenuPT) => {
+export const HeaderMenu = (props: MenuPT) => {
   return (
     <StyledMenu>
       <ul>
@@ -19,7 +19,7 @@ export const Menu = (props: MenuPT) => {
           <ListItem key={el.id}>
             <Link href={"#1"}>
               <FirstLetterSpan>{el.text.charAt(0)}</FirstLetterSpan>
-              <span>{el.text.slice(1)}</span>
+              {el.text.slice(1)}
             </Link>
           </ListItem>
         ))}
@@ -39,13 +39,21 @@ const FirstLetterSpan = styled.span`
   color: ${theme.colors.accent};
 `;
 
-const ListItem = styled.li``;
+const ListItem = styled.li`
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
 
 const Link = styled.a`
-  span {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: ${theme.colors.secondaryFort};
+  transition: all 0.3s ease;
+  &:hover {
+    color: ${theme.colors.primaryFont};
   }
 `;

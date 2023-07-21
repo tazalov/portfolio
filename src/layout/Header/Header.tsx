@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Logo } from "../../components/Logo/Logo";
-import { Menu } from "../../components/Menu/Menu";
+import { Container } from "../../components/Container";
+import { FlexWrapper } from "../../components/FlexWrapper/FlexWrapper";
+import { HeaderMenu } from "./HeaderMenu/HeaderMenu";
+import { theme } from "../../styles/Theme";
 
 const menuItems = [
   { id: 1, text: "#home" },
@@ -13,14 +16,21 @@ const menuItems = [
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
-      <Menu items={menuItems} />
+      <Container>
+        <FlexWrapper justify={"space-between"} align={"center"}>
+          <Logo />
+          <HeaderMenu items={menuItems} />
+        </FlexWrapper>
+      </Container>
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
-  background-color: #64ec64;
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: ${theme.colors.primaryBg};
+  z-index: 10000;
 `;
