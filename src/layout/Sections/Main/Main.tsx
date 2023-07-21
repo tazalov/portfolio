@@ -48,14 +48,6 @@ export const Main = () => {
                 viewBox={"0 0 156 156"}
               />
             </AbsoluteIcon>
-            <AbsoluteIcon bottom={"-10%"} right={"-10%"}>
-              <Icon
-                iconId={"dots"}
-                width={"84"}
-                height={"84"}
-                viewBox={"0 0 84 84"}
-              />
-            </AbsoluteIcon>
           </MainPhoto>
         </FlexWrapper>
       </Container>

@@ -10,4 +10,8 @@ export const theme = {
     secondaryFort: "#ABB2BF",
     secondaryFortOpacity: "rgba(171,178,191, 0.5)",
   },
+  media: {
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 576px)",
+  },
 };

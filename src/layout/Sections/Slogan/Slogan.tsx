@@ -26,7 +26,9 @@ export const Slogan = () => {
   );
 };
 
-const StyledSlogan = styled.section``;
+const StyledSlogan = styled.section`
+  position: relative;
+`;
 
 const Copyright = styled(SectionSubtitle)`
   max-width: 100%;
