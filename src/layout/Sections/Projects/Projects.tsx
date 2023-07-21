@@ -20,7 +20,7 @@ export const Projects = () => {
     <StyledProjects>
       <Container>
         <SectionTitle>
-          <span>&lt;div&gt;</span>projects<span>&lt;/div&gt;</span>
+          <span>&lt;</span>Projects<span>&gt;</span>
         </SectionTitle>
         <Menu items={menuItems} />
         <FlexWrapper wrap={"wrap"} justify={"center"} relative>
@@ -73,6 +73,9 @@ export const Projects = () => {
             img={anynft}
           />
         </FlexWrapper>
+        <SectionTitle>
+          <span>&lt;/</span>Projects<span>&gt;</span>
+        </SectionTitle>
       </Container>
     </StyledProjects>
   );

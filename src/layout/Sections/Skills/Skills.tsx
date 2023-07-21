@@ -61,11 +61,8 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  min-height: 80vh;
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 32px;
-  display: flex;
 `;
 
 const SkillArray = styled.div`

@@ -48,9 +48,7 @@ const ListItem = styled.li`
 
 const Link = styled.a`
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   color: ${theme.colors.secondaryFort};
   transition: all 0.3s ease;
   &:hover {

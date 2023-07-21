@@ -11,21 +11,24 @@ export const Slogan = () => {
       <Container>
         <FlexWrapper justify={"center"} direction={"column"}>
           <SectionTitle>
-            <span>&lt;blockquote&gt;</span>
+            <span>&lt;</span>blockquote<span>&gt;</span>
             <br />
             <pre>
               {"  "}A person has not yet been born who could not become a
               programmer.
             </pre>
-            <span>&lt;/blockquote&gt;</span>
+            <span>&lt;/</span>blockquote<span>&gt;</span>
           </SectionTitle>
-          <SectionSubtitle>© Igor Yudintsev</SectionSubtitle>
+          <Copyright>© Igor Yudintsev</Copyright>
         </FlexWrapper>
       </Container>
     </StyledSlogan>
   );
 };
 
-const StyledSlogan = styled.div`
-  min-height: 20vh;
+const StyledSlogan = styled.section``;
+
+const Copyright = styled(SectionSubtitle)`
+  max-width: 100%;
+  text-align: right;
 `;

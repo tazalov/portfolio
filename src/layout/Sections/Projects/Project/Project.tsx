@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../styles/Theme";
+import { Link } from "../../../../components/Link/Link";
 
 type ProjectPT = {
   title: string;
@@ -16,7 +17,10 @@ export const Project = (props: ProjectPT) => {
       <ProjectTech>{props.tech}</ProjectTech>
       <ProjectTitle>{props.title}</ProjectTitle>
       <ProjectText>{props.text}</ProjectText>
-      <Link>#demo</Link>
+      <Buttons>
+        <Link demo>&lt;demo/&gt;</Link>
+        <Link>&lt;code/&gt;</Link>
+      </Buttons>
     </StyledProject>
   );
 };
@@ -29,6 +33,8 @@ const StyledProject = styled.div`
   border: 1px solid ${theme.colors.secondaryFort};
   text-align: left;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
 `;
 
 const ProjectImg = styled.img`
@@ -53,8 +59,11 @@ const ProjectText = styled.p`
   line-height: 32px;
 `;
 
+const Buttons = styled.div`
+  margin-top: auto;
+  padding: 20px;
+`;
+
 const ProjectTech = styled(ProjectText)`
   border-bottom: 1px solid ${theme.colors.secondaryFort};
 `;
-
-const Link = styled.a``;
