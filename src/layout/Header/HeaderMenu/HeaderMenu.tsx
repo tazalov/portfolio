@@ -13,7 +13,7 @@ type MenuPT = {
 
 export const HeaderMenu = (props: MenuPT) => {
   return (
-    <StyledMenu>
+    <StyledHeaderMenu>
       <ul>
         {props.items.map((el) => (
           <ListItem key={el.id}>
@@ -24,11 +24,14 @@ export const HeaderMenu = (props: MenuPT) => {
           </ListItem>
         ))}
       </ul>
-    </StyledMenu>
+    </StyledHeaderMenu>
   );
 };
 
-const StyledMenu = styled.nav`
+const StyledHeaderMenu = styled.nav`
+  @media ${theme.media.tablet} {
+    display: none;
+  }
   & ul {
     display: flex;
     gap: 30px;
@@ -47,7 +50,7 @@ const ListItem = styled.li`
 `;
 
 const Link = styled.a`
-  font-size: 16px;
+  font-size: 32px;
   font-weight: 500;
   color: ${theme.colors.secondaryFort};
   transition: all 0.3s ease;
