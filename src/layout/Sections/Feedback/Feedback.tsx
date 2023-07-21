@@ -8,7 +8,9 @@ import { FlexWrapper } from "../../../components/FlexWrapper/FlexWrapper";
 export const Feedback = () => {
   return (
     <StyledFeedback>
-      <SectionTitle>#feedback</SectionTitle>
+      <SectionTitle>
+        <span>&lt;p&gt;</span>feedback<span>&lt;/p&gt;</span>
+      </SectionTitle>
       <FlexWrapper direction={"column"} align={"center"}>
         <Icon
           iconId={"quotes"}

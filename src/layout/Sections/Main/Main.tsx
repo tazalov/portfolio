@@ -1,24 +1,42 @@
 import React from "react";
 import photo from "../../../assets/img/photo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper/FlexWrapper";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { AbsoluteIcon } from "../../../components/AbsoluteIcon";
 import { Icon } from "../../../components/Icon/Icon";
+import { SectionSubtitle } from "../../../components/SectionSubtitle/SectionSubtitle";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify={"space-around"} align={"center"}>
+        <FlexWrapper justify={"space-between"} align={"center"}>
           <MainText>
             <StyledH1>
-              Tazalov is a <span>front-end developer</span>
+              <pre>
+                <span>const</span> dev = <span>&#123;</span>
+                <br />
+                {"  "}
+                <span>name:</span> 'Iliya Tazalov',
+                <br />
+                {"  "}
+                <span>direction:</span> 'front-end',
+                <br />
+                {"  "}
+                <span>about:</span> 'one you need'
+                <br />
+                <span>
+                  &#125;;
+                  <Cursor>|</Cursor>
+                </span>
+              </pre>
             </StyledH1>
-            <StyledH2>
-              He crafts responsive websites where technologies meet creativity
-            </StyledH2>
+            <SectionSubtitle>
+              He will do any tasks for you. He will even fix bugs left by other
+              developers as long as his heart beats.
+            </SectionSubtitle>
           </MainText>
           <MainPhoto>
             <img src={photo} alt="" />
@@ -46,7 +64,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  min-height: 60vh;
+  min-height: 100vh;
   display: flex;
   position: relative;
 `;
@@ -67,21 +85,27 @@ const MainPhoto = styled.div`
 
 const StyledH1 = styled.h1`
   font-size: 32px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
+  line-height: 50px;
   margin-bottom: 32px;
   span {
     color: ${theme.colors.accent};
   }
 `;
 
-const StyledH2 = styled.h2`
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-  color: ${theme.colors.secondaryFort};
-  max-width: 400px;
-  width: 100%;
+const blinkAnimation = keyframes`
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const Cursor = styled.abbr`
+  color: ${theme.colors.primaryFont};
+  animation: ${blinkAnimation} 1s infinite;
 `;

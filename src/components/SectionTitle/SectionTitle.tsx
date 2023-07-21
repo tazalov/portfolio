@@ -1,16 +1,16 @@
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 export const SectionTitle = styled.h2`
-  color: red;
+  color: ${theme.colors.primaryFont};
   position: relative;
   display: inline-block;
-  &:after {
-    content: "";
-    width: 50vw;
-    height: 2px;
-    background-color: red;
-    position: absolute;
-    left: 105%;
-    bottom: 30%;
+  margin: 20px 0;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  span {
+    color: ${theme.colors.accent};
   }
 `;

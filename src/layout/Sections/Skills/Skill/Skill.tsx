@@ -5,7 +5,6 @@ import styled from "styled-components";
 type SkillPT = {
   iconId: string;
   title: string;
-  text: string;
 };
 
 export const Skill = (props: SkillPT) => {
@@ -18,20 +17,24 @@ export const Skill = (props: SkillPT) => {
         viewBox={"0 0 50 50"}
       />
       <SkillTitle>{props.title}</SkillTitle>
-      <SkillText>{props.text}</SkillText>
     </StyledSkill>
   );
 };
 
 const StyledSkill = styled.div`
   text-align: center;
-  width: 30%;
   margin: 10px;
-  padding: 10px;
-  background-color: #706767;
-  color: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 135px;
+  height: 135px;
 `;
 const SkillTitle = styled.h3`
   text-transform: uppercase;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  max-width: 140px;
 `;
-const SkillText = styled.p``;

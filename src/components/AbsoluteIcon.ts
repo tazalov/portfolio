@@ -8,7 +8,6 @@ type AbsoluteIconPT = {
 };
 
 export const AbsoluteIcon = styled.div<AbsoluteIconPT>`
-  z-index: 1;
   position: absolute;
   ${(props) =>
     props.top &&

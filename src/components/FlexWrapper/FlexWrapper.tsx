@@ -1,10 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 type FlexWrapperPT = {
   direction?: string;
   justify?: string;
   align?: string;
   wrap?: string;
+  relative?: boolean;
+  content?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperPT>`
@@ -14,4 +16,10 @@ export const FlexWrapper = styled.div<FlexWrapperPT>`
   justify-content: ${(props) => props.justify || "flex-start"};
   align-items: ${(props) => props.align || "stretch"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
+  align-content: ${(props) => props.content || "stretch"};
+  ${(props) =>
+    props.relative &&
+    css`
+      position: relative;
+    `};
 `;

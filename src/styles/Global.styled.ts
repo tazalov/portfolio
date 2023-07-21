@@ -68,4 +68,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: inherit;
     font-size: inherit;
   }
+  section {
+    padding: 80px 0;
+  }
 `;

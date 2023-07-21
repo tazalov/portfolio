@@ -35,7 +35,7 @@ const StyledMenu = styled.nav`
   }
 `;
 
-const FirstLetterSpan = styled.span`
+export const FirstLetterSpan = styled.span`
   color: ${theme.colors.accent};
 `;
 
