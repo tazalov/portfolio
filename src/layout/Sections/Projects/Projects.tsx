@@ -105,7 +105,9 @@ export const Projects = () => {
     <StyledProjects id={"projects"}>
       <Container>
         <SectionTitle>
-          <span>&lt;</span>Projects<span>&gt;</span>
+          <span>&lt;</span>
+          <code>Projects</code>
+          <span>&gt;</span>
         </SectionTitle>
         <Menu tabItems={tabItems} changeFilter={changeFilter} filter={filter} />
         <BorderWrapper wrap={"wrap"} justify={"center"} relative>
@@ -144,7 +146,9 @@ export const Projects = () => {
           ))}
         </BorderWrapper>
         <SectionTitle>
-          <span>&lt;/</span>Projects<span>&gt;</span>
+          <span>&lt;/</span>
+          <code>Projects</code>
+          <span>&gt;</span>
         </SectionTitle>
       </Container>
     </StyledProjects>

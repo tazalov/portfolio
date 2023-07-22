@@ -10,15 +10,19 @@ export const Slogan = () => {
     <StyledSlogan>
       <Container>
         <SectionTitle>
-          <span>&lt;</span>blockquote<span>&gt;</span>
+          <span>&lt;</span>
+          <code>blockquote</code>
+          <span>&gt;</span>
         </SectionTitle>
         <SloganText>
           A person has not yet been born who could not become a programmer.
         </SloganText>
         <SectionTitle>
-          <span>&lt;/</span>blockquote<span>&gt;</span>
+          <span>&lt;/</span>
+          <code>blockquote</code>
+          <span>&gt;</span>
         </SectionTitle>
-        <Copyright>© Igor Yudintsev</Copyright>
+        <Copyright>/* © Igor Yudintsev */</Copyright>
       </Container>
     </StyledSlogan>
   );

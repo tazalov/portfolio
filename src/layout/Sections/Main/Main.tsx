@@ -18,16 +18,16 @@ export const Main = () => {
           <MainText>
             <SectionTitle>
               <pre>
-                <span>const</span> dev = <span>&#123;</span>
+                <span>const</span> <code>dev</code> = <span>&#123;</span>
                 <br />
                 {"  "}
-                <span>name:</span> 'Iliya Tazalov',
+                <i>name:</i> 'Iliya Tazalov',
                 <br />
                 {"  "}
-                <span>direction:</span> 'front-end',
+                <i>direction:</i> 'front-end',
                 <br />
                 {"  "}
-                <span>about:</span> 'one you need'
+                <i>about:</i> 'one you need'
                 <br />
                 <span>
                   &#125;;
@@ -36,11 +36,11 @@ export const Main = () => {
               </pre>
             </SectionTitle>
             <SectionSubtitle>
-              He will do any tasks for you.
+              /* He will do any tasks for you.
               <br />
               He will even fix bugs left by other
               <br />
-              developers as long as his heart beats.
+              developers as long as his heart beats. */
             </SectionSubtitle>
           </MainText>
           <MainPhoto>

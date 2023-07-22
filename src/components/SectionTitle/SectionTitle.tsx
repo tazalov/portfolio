@@ -9,4 +9,10 @@ export const SectionTitle = styled.h2`
   span {
     color: ${theme.colors.accent};
   }
+  code {
+    color: ${theme.colors.secondaryAccent};
+  }
+  i {
+    color: ${theme.colors.thirdAccent};
+  }
 `;

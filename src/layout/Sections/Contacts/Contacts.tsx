@@ -12,10 +12,15 @@ export const Contacts = () => {
     <StyledContacts id={"contacts"}>
       <Container>
         <SectionTitle>
-          <span>&lt;</span>form<span>&gt;</span>
+          <span>&lt;</span>
+          <code>form</code>
+          <span>&gt;</span>
         </SectionTitle>
         <ContactsTitle>
-          <span>&lt;</span>h2<span>&gt;</span>write me<span>&lt;/</span>h2
+          <span>&lt;</span>
+          <code>h2</code>
+          <span>&gt;</span>write me<span>&lt;/</span>
+          <code>h2</code>
           <span>&gt;</span>
         </ContactsTitle>
         <StyledForm>
@@ -60,7 +65,9 @@ export const Contacts = () => {
           </Button>
         </StyledForm>
         <SectionTitle>
-          <span>&lt;/</span>form<span>&gt;</span>
+          <span>&lt;/</span>
+          <code>form</code>
+          <span>&gt;</span>
         </SectionTitle>
       </Container>
     </StyledContacts>

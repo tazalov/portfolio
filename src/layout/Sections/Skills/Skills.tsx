@@ -14,7 +14,7 @@ export const Skills = () => {
     <StyledSkills id={"skills"}>
       <Container>
         <SectionTitle>
-          <span>const</span> skillsArray = <span>[</span>
+          <span>const</span> <code>skillsArray</code> = <span>[</span>
         </SectionTitle>
         <GridWrapper countCol={6} widthCol={"1fr"} autoRows={"1fr"}>
           <Skill iconId={"react"} title={"react"} />
@@ -34,7 +34,9 @@ export const Skills = () => {
             ];<Cursor>|</Cursor>
           </span>
         </SectionTitle>
-        <SectionSubtitle>P.S. The list may be incomplete.</SectionSubtitle>
+        <SectionSubtitle>
+          /* P.S. The list may be incomplete. */
+        </SectionSubtitle>
       </Container>
     </StyledSkills>
   );
