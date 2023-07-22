@@ -24,18 +24,10 @@ export const Skill = (props: SkillPT) => {
 
 const StyledSkill = styled.div`
   text-align: center;
-  margin: 10px;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 135px;
-  height: 135px;
-  padding: 5px;
 `;
-const SkillTitle = styled.h3`
-  ${font({ weight: 600, Fmax: 20, Fmin: 18 })}
+const SkillTitle = styled.h4`
+  ${font({ weight: 600, lineHeight: 1.2, Fmax: 20, Fmin: 14 })}
   text-transform: uppercase;
-  padding: 10px;
   max-width: 140px;
 `;

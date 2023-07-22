@@ -6,10 +6,12 @@ type GridTemplatePT = {
   autoCol?: string;
   countCol?: number;
   widthCol?: string;
+  gap?: string;
 };
 
 export const GridWrapper = styled.div<GridTemplatePT>`
   display: grid;
+  gap: ${(props) => props.gap || "10px"};
   ${(props) =>
     props.countCol &&
     css`

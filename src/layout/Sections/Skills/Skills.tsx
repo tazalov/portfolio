@@ -17,7 +17,7 @@ export const Skills = () => {
         <SkillArray>
           <span>const</span> skillsArray = <span>[</span>
         </SkillArray>
-        <GridWrapper countCol={6} widthCol={"135px"} autoRows={"135px"}>
+        <GridWrapper countCol={6} widthCol={"1fr"} autoRows={"1fr"}>
           <Skill iconId={"react"} title={"react"} />
           <Skill iconId={"redux"} title={"redux & toolkit"} />
           <Skill iconId={"styled"} title={"styled component"} />
@@ -41,7 +41,7 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  ${font({ weight: 600, lineHeight: "60px", Fmax: 40, Fmin: 18 })}
+  ${font({ weight: 600, Fmax: 40, Fmin: 18 })}
 `;
 
 const SkillArray = styled.div`

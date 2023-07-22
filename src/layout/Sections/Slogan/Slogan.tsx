@@ -4,23 +4,22 @@ import { FlexWrapper } from "../../../components/FlexWrapper/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 import { SectionSubtitle } from "../../../components/SectionSubtitle/SectionSubtitle";
+import { font } from "../../../styles/Common";
 
 export const Slogan = () => {
   return (
     <StyledSlogan>
       <Container>
-        <FlexWrapper justify={"center"} direction={"column"}>
-          <SectionTitle>
-            <span>&lt;</span>blockquote<span>&gt;</span>
-            <br />
-            <pre>
-              {"  "}A person has not yet been born who could not become a
-              programmer.
-            </pre>
-            <span>&lt;/</span>blockquote<span>&gt;</span>
-          </SectionTitle>
-          <Copyright>© Igor Yudintsev</Copyright>
-        </FlexWrapper>
+        <SectionTitle>
+          <span>&lt;</span>blockquote<span>&gt;</span>
+        </SectionTitle>
+        <SloganText>
+          A person has not yet been born who could not become a programmer.
+        </SloganText>
+        <SectionTitle>
+          <span>&lt;/</span>blockquote<span>&gt;</span>
+        </SectionTitle>
+        <Copyright>© Igor Yudintsev</Copyright>
       </Container>
     </StyledSlogan>
   );
@@ -28,6 +27,11 @@ export const Slogan = () => {
 
 const StyledSlogan = styled.section`
   position: relative;
+`;
+
+const SloganText = styled.p`
+  ${font({ weight: 400, Fmax: 30, Fmin: 18 })}
+  padding-left: 40px;
 `;
 
 const Copyright = styled(SectionSubtitle)`

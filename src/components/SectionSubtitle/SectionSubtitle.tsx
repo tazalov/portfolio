@@ -2,13 +2,12 @@ import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 import { font } from "../../styles/Common";
 
-export const SectionSubtitle = styled.h2`
+export const SectionSubtitle = styled.h3`
   ${font({
     weight: 400,
-    lineHeight: "25px",
     color: `${theme.colors.secondaryFort}`,
-    Fmax: 18,
-    Fmin: 12,
+    Fmax: 20,
+    Fmin: 14,
   })}
   width: 100%;
   margin: 20px 0;

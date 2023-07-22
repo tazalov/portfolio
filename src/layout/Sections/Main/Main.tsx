@@ -84,7 +84,7 @@ const MainPhoto = styled.div`
 `;
 
 const StyledH1 = styled.h1`
-  ${font({ weight: 600, lineHeight: "60px", Fmax: 40, Fmin: 18 })}
+  ${font({ weight: 600, Fmax: 40, Fmin: 18 })}
   margin-bottom: 32px;
   span {
     color: ${theme.colors.accent};
