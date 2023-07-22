@@ -25,7 +25,7 @@ export const Skills = () => {
           <Skill iconId={"code"} title={"html5"} />
           <Skill iconId={"css"} title={"css3"} />
           <Skill iconId={"sass"} title={"sass/scss"} />
-          <Skill iconId={"js"} title={"java script"} />
+          <Skill iconId={"js"} title={"javascript"} />
         </GridWrapper>
         <SectionTitle>
           <span>
