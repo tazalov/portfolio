@@ -69,9 +69,9 @@ export const GlobalStyle = createGlobalStyle`
     font-size: inherit;
   }
   section {
-    padding: 80px 0;
+    padding: 100px 0;
     @media ${theme.media.tablet} {
-      padding: 40px 0;
+      padding: 50px 0;
     }
   }
 `;

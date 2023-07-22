@@ -7,10 +7,10 @@ import { theme } from "../../styles/Theme";
 import { MobileMenu } from "./MobileMenu/MobileMenu";
 
 const menuItems = [
-  { id: 1, text: "#home" },
-  { id: 2, text: "#skills" },
-  { id: 3, text: "#projects" },
-  { id: 4, text: "#contacts" },
+  { id: 1, text: "home" },
+  { id: 2, text: "skills" },
+  { id: 3, text: "projects" },
+  { id: 4, text: "contacts" },
 ];
 
 export const Header = () => {
@@ -33,5 +33,6 @@ const StyledHeader = styled.header`
   right: 0;
   background-color: ${theme.colors.primaryBg};
   z-index: 10000;
-  padding: 10px;
+  height: 50px;
+  padding: 5px;
 `;

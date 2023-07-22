@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
 
@@ -12,18 +12,20 @@ type MenuPT = {
 };
 
 export const MobileMenu = (props: MenuPT) => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const openMenu = () => setMenuOpen(!menuOpen);
   return (
     <StyledMobileMenu>
-      <BurgerButton isOpen={false}>
+      <BurgerButton isOpen={menuOpen} onClick={openMenu}>
         <span></span>
       </BurgerButton>
-      <MobileMenuWrapper isOpen={false}>
+      <MobileMenuWrapper isOpen={menuOpen} onClick={() => setMenuOpen(false)}>
         <ul>
           {props.items.map((el) => (
-            <ListItem key={el.id}>
-              <Link href={"#1"}>
-                <span>{el.text.charAt(0)}</span>
-                {el.text.slice(1)}
+            <ListItem key={el.id} onClick={() => setMenuOpen(false)}>
+              <Link href={`#${el.text}`}>
+                <span>#</span>
+                {el.text}
               </Link>
             </ListItem>
           ))}
@@ -49,9 +51,11 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   z-index: 99999;
   background-color: ${theme.colors.secondaryBg};
   display: none;
+  transition: all 0.3s ease-out;
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
+      display: block;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -116,12 +120,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `;
 
-const ListItem = styled.li`
-  transition: all 0.3s ease;
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+const ListItem = styled.li``;
 
 const Link = styled.a`
   font-size: 32px;

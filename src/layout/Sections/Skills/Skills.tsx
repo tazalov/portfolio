@@ -11,7 +11,7 @@ import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <StyledSkills id={"skills"}>
       <Container>
         <SectionTitle>
           <span>const</span> skillsArray = <span>[</span>

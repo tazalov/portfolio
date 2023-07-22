@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 import { Menu } from "./Menu/Menu";
@@ -8,22 +8,107 @@ import anynft from "../../../assets/img/project_logo.webp";
 import { Container } from "../../../components/Container";
 import { AbsoluteIcon } from "../../../components/AbsoluteIcon";
 import { Icon } from "../../../components/Icon/Icon";
+import { theme } from "../../../styles/Theme";
 
-const menuItems = [
-  { id: 1, text: "#landing" },
-  { id: 2, text: "#react" },
-  { id: 3, text: "#SPA" },
+export type TabT = {
+  id: number;
+  text: FilterT;
+};
+
+const tabItems: TabT[] = [
+  { id: 1, text: "landing" },
+  { id: 2, text: "react" },
+  { id: 3, text: "spa" },
+  { id: 4, text: "all" },
 ];
 
+export type FilterT = "landing" | "react" | "spa" | "all";
+
 export const Projects = () => {
+  const projects = [
+    {
+      id: 1,
+      tech: "react, redux, html,css",
+      photo: "asd",
+      title: "ANY NFT",
+      text: "text",
+      tabName: "landing",
+    },
+    {
+      id: 5,
+      tech: "react, redux, html,css",
+      photo: "asd",
+      title: "ANY NFT",
+      text: "text",
+      tabName: "react",
+    },
+    {
+      id: 6,
+      tech: "react, redux, html,css",
+      photo: "asd",
+      title: "ANY NFT",
+      text: "text",
+      tabName: "react",
+    },
+    {
+      id: 10,
+      tech: "react, spa",
+      photo: "asd",
+      title: "ANY NFT",
+      text: "text",
+      tabName: "spa",
+    },
+    {
+      id: 11,
+      tech: "react, spa",
+      photo: "asd",
+      title: "social",
+      text: "text",
+      tabName: "spa",
+    },
+    {
+      id: 12,
+      tech: "react, spa",
+      photo: "asd",
+      title: "network",
+      text: "text",
+      tabName: "spa",
+    },
+  ];
+  const [filter, setFilter] = useState<FilterT>("all");
+  let filteredProjects = projects;
+
+  switch (filter) {
+    case "landing": {
+      filteredProjects = projects.filter((el) => el.tabName === "landing");
+      break;
+    }
+    case "react": {
+      filteredProjects = projects.filter((el) => el.tabName === "react");
+      break;
+    }
+    case "spa": {
+      filteredProjects = projects.filter((el) => el.tabName === "spa");
+      break;
+    }
+    default: {
+      filteredProjects = projects;
+      break;
+    }
+  }
+
+  const changeFilter = (value: FilterT) => {
+    setFilter(value);
+  };
+
   return (
-    <StyledProjects>
+    <StyledProjects id={"projects"}>
       <Container>
         <SectionTitle>
           <span>&lt;</span>Projects<span>&gt;</span>
         </SectionTitle>
-        <Menu items={menuItems} />
-        <FlexWrapper wrap={"wrap"} justify={"center"} relative>
+        <Menu tabItems={tabItems} changeFilter={changeFilter} filter={filter} />
+        <BorderWrapper wrap={"wrap"} justify={"center"} relative>
           {/*          <AbsoluteIcon top={"0"} left={"-5%"}>
             <Icon
               iconId={"logo"}
@@ -48,27 +133,16 @@ export const Projects = () => {
               viewBox={"0 0 186 186"}
             />
           </AbsoluteIcon>*/}
-          <Project
-            tech={"React, Redux, Styled component"}
-            title={"ANY NFT"}
-            text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
-            img={anynft}
-          />
-          <Project
-            tech={"HTML, CSS, Java Script"}
-            title={"Car repair"}
-            text={"Rerum similique sit. Placeat, sunt tempore?"}
-            img={anynft}
-          />
-          <Project
-            tech={"Angular, JavaScript, redux-form"}
-            title={"Social network"}
-            text={
-              "Blanditiis consequatur consequuntur ipsum nobis repellat rerum similique sit."
-            }
-            img={anynft}
-          />
-        </FlexWrapper>
+          {filteredProjects.map((el) => (
+            <Project
+              key={el.id}
+              tech={el.tech}
+              title={el.title}
+              text={el.text}
+              img={anynft}
+            />
+          ))}
+        </BorderWrapper>
         <SectionTitle>
           <span>&lt;/</span>Projects<span>&gt;</span>
         </SectionTitle>
@@ -78,3 +152,7 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section``;
+
+const BorderWrapper = styled(FlexWrapper)`
+  border: 1px solid ${theme.colors.secondaryFort};
+`;

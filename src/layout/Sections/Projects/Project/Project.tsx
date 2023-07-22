@@ -56,8 +56,8 @@ const ProjectText = styled.p`
 `;
 
 const Buttons = styled.div`
-  margin-top: auto;
-  padding: 20px;
+  margin: auto 0 10px 0;
+  padding: 10px;
 `;
 
 const ProjectTech = styled(ProjectText)`

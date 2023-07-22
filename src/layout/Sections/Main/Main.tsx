@@ -12,7 +12,7 @@ import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 export const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain id={"home"}>
       <Container>
         <FlexWrapper justify={"space-between"} align={"center"}>
           <MainText>

@@ -9,7 +9,7 @@ import { Icon } from "../../../components/Icon/Icon";
 
 export const Contacts = () => {
   return (
-    <StyledContacts>
+    <StyledContacts id={"contacts"}>
       <Container>
         <SectionTitle>
           <span>&lt;</span>form<span>&gt;</span>

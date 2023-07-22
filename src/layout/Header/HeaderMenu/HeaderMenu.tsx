@@ -17,9 +17,9 @@ export const HeaderMenu = (props: MenuPT) => {
       <ul>
         {props.items.map((el) => (
           <ListItem key={el.id}>
-            <Link href={"#1"}>
-              <span>{el.text.charAt(0)}</span>
-              {el.text.slice(1)}
+            <Link href={`#${el.text}`}>
+              <span>#</span>
+              {el.text}
             </Link>
           </ListItem>
         ))}

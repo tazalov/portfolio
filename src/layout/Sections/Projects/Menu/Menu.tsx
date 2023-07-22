@@ -1,26 +1,29 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { theme } from "../../../../styles/Theme";
-
-export type MenuItemT = {
-  id: number;
-  text: string;
-};
+import { FilterT, TabT } from "../Projects";
+import { font } from "../../../../styles/Common";
 
 type MenuPT = {
-  items: MenuItemT[];
+  filter: FilterT;
+  tabItems: TabT[];
+  changeFilter: (value: FilterT) => void;
 };
 
 export const Menu = (props: MenuPT) => {
   return (
     <StyledMenu>
       <ul>
-        {props.items.map((el) => (
-          <ListItem key={el.id}>
-            <Link href={"#1"}>
-              <span>{el.text.charAt(0)}</span>
-              {el.text.slice(1)}
-            </Link>
+        {props.tabItems.map((el) => (
+          <ListItem
+            key={el.id}
+            onClick={() => props.changeFilter(el.text)}
+            active={el.text === props.filter}
+          >
+            <Tab>
+              <span>#</span>
+              {el.text}
+            </Tab>
           </ListItem>
         ))}
       </ul>
@@ -29,20 +32,32 @@ export const Menu = (props: MenuPT) => {
 };
 
 const StyledMenu = styled.nav`
-  padding-bottom: 20px;
+  position: relative;
+  z-index: 2;
   & ul {
     display: flex;
-    gap: 30px;
     justify-content: center;
   }
 `;
 
-const ListItem = styled.li`
+type ListItemPT = {
+  active: boolean;
+};
+
+const ListItem = styled.li<ListItemPT>`
   padding: 5px 10px;
+  background-color: ${theme.colors.primaryBg};
+  ${(props) =>
+    props.active &&
+    css`
+      border: 1px solid ${theme.colors.secondaryFort};
+      border-bottom: 0;
+      margin-bottom: -1px;
+    `}
 `;
 
-const Link = styled.a`
-  font-size: 25px;
+const Tab = styled.button`
+  ${font({ lineHeight: 1.2, Fmax: 25, Fmin: 14 })}
   span {
     color: ${theme.colors.accent};
   }
