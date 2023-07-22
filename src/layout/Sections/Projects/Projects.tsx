@@ -51,24 +51,20 @@ export const Projects = () => {
           <Project
             tech={"React, Redux, Styled component"}
             title={"ANY NFT"}
-            text={
-              '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur consequuntur"'
-            }
+            text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
             img={anynft}
           />
           <Project
             tech={"HTML, CSS, Java Script"}
             title={"Car repair"}
-            text={
-              '"Lorem ipsum dolor sit amet, consectetur ipsum nobis repellat rerum similique sit. Placeat, sunt tempore?"'
-            }
+            text={"Rerum similique sit. Placeat, sunt tempore?"}
             img={anynft}
           />
           <Project
             tech={"Angular, JavaScript, redux-form"}
             title={"Social network"}
             text={
-              '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur consequuntur ipsum nobis repellat rerum similique sit. Placeat, sunt tempore?"'
+              "Blanditiis consequatur consequuntur ipsum nobis repellat rerum similique sit."
             }
             img={anynft}
           />

@@ -18,8 +18,8 @@ export const Menu = (props: MenuPT) => {
         {props.items.map((el) => (
           <ListItem key={el.id}>
             <Link href={"#1"}>
-              <FirstLetterSpan>{el.text.charAt(0)}</FirstLetterSpan>
-              <span>{el.text.slice(1)}</span>
+              <span>{el.text.charAt(0)}</span>
+              {el.text.slice(1)}
             </Link>
           </ListItem>
         ))}
@@ -37,19 +37,13 @@ const StyledMenu = styled.nav`
   }
 `;
 
-const FirstLetterSpan = styled.span`
-  color: ${theme.colors.accent};
-`;
-
 const ListItem = styled.li`
   padding: 5px 10px;
 `;
 
 const Link = styled.a`
+  font-size: 25px;
   span {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+    color: ${theme.colors.accent};
   }
 `;

@@ -18,7 +18,7 @@ export const HeaderMenu = (props: MenuPT) => {
         {props.items.map((el) => (
           <ListItem key={el.id}>
             <Link href={"#1"}>
-              <FirstLetterSpan>{el.text.charAt(0)}</FirstLetterSpan>
+              <span>{el.text.charAt(0)}</span>
               {el.text.slice(1)}
             </Link>
           </ListItem>
@@ -38,10 +38,6 @@ const StyledHeaderMenu = styled.nav`
   }
 `;
 
-export const FirstLetterSpan = styled.span`
-  color: ${theme.colors.accent};
-`;
-
 const ListItem = styled.li`
   transition: all 0.3s ease;
   &:hover {
@@ -50,11 +46,14 @@ const ListItem = styled.li`
 `;
 
 const Link = styled.a`
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 500;
   color: ${theme.colors.secondaryFort};
   transition: all 0.3s ease;
   &:hover {
     color: ${theme.colors.primaryFont};
+  }
+  span {
+    color: ${theme.colors.accent};
   }
 `;

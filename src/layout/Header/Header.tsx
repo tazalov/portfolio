@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Logo } from "../../components/Logo/Logo";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper/FlexWrapper";
 import { HeaderMenu } from "./HeaderMenu/HeaderMenu";
@@ -18,8 +17,7 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper justify={"space-between"} align={"center"}>
-          <Logo />
+        <FlexWrapper justify={"center"} align={"center"}>
           <HeaderMenu items={menuItems} />
           <MobileMenu items={menuItems} />
         </FlexWrapper>
@@ -35,4 +33,5 @@ const StyledHeader = styled.header`
   right: 0;
   background-color: ${theme.colors.primaryBg};
   z-index: 10000;
+  padding: 10px;
 `;

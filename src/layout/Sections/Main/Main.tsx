@@ -8,6 +8,7 @@ import { AbsoluteIcon } from "../../../components/AbsoluteIcon";
 import { Icon } from "../../../components/Icon/Icon";
 import { SectionSubtitle } from "../../../components/SectionSubtitle/SectionSubtitle";
 import { font } from "../../../styles/Common";
+import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 export const Main = () => {
   return (
@@ -15,7 +16,7 @@ export const Main = () => {
       <Container>
         <FlexWrapper justify={"space-between"} align={"center"}>
           <MainText>
-            <StyledH1>
+            <SectionTitle>
               <pre>
                 <span>const</span> dev = <span>&#123;</span>
                 <br />
@@ -33,7 +34,7 @@ export const Main = () => {
                   <Cursor>|</Cursor>
                 </span>
               </pre>
-            </StyledH1>
+            </SectionTitle>
             <SectionSubtitle>
               He will do any tasks for you.
               <br />
@@ -80,14 +81,6 @@ const MainPhoto = styled.div`
     max-width: 378px;
     height: auto;
     width: 100%;
-  }
-`;
-
-const StyledH1 = styled.h1`
-  ${font({ weight: 600, Fmax: 40, Fmin: 18 })}
-  margin-bottom: 32px;
-  span {
-    color: ${theme.colors.accent};
   }
 `;
 

@@ -4,19 +4,18 @@ import { Skill } from "./Skill/Skill";
 import { Container } from "../../../components/Container";
 import { AbsoluteIcon } from "../../../components/AbsoluteIcon";
 import { Icon } from "../../../components/Icon/Icon";
-import { theme } from "../../../styles/Theme";
 import { SectionSubtitle } from "../../../components/SectionSubtitle/SectionSubtitle";
 import { Cursor } from "../Main/Main";
-import { font } from "../../../styles/Common";
 import { GridWrapper } from "../../../components/GridWrapper/GridWrapper";
+import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
-        <SkillArray>
+        <SectionTitle>
           <span>const</span> skillsArray = <span>[</span>
-        </SkillArray>
+        </SectionTitle>
         <GridWrapper countCol={6} widthCol={"1fr"} autoRows={"1fr"}>
           <Skill iconId={"react"} title={"react"} />
           <Skill iconId={"redux"} title={"redux & toolkit"} />
@@ -27,28 +26,21 @@ export const Skills = () => {
           <Skill iconId={"tests"} title={"tests"} />
           <Skill iconId={"code"} title={"html5"} />
           <Skill iconId={"css"} title={"css3"} />
+          <Skill iconId={"sass"} title={"sass/scss"} />
           <Skill iconId={"js"} title={"java script"} />
         </GridWrapper>
-        <SkillArray>
+        <SectionTitle>
           <span>
             ];<Cursor>|</Cursor>
           </span>
-        </SkillArray>
+        </SectionTitle>
         <SectionSubtitle>P.S. The list may be incomplete.</SectionSubtitle>
       </Container>
     </StyledSkills>
   );
 };
 
-const StyledSkills = styled.section`
-  ${font({ weight: 600, Fmax: 40, Fmin: 18 })}
-`;
-
-const SkillArray = styled.div`
-  span {
-    color: ${theme.colors.accent};
-  }
-`;
+const StyledSkills = styled.section``;
 
 {
   /*            <AbsoluteIcon bottom={"-5%"} right={"-5%"}>

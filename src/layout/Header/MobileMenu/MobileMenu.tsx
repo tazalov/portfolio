@@ -22,7 +22,7 @@ export const MobileMenu = (props: MenuPT) => {
           {props.items.map((el) => (
             <ListItem key={el.id}>
               <Link href={"#1"}>
-                <FirstLetterSpan>{el.text.charAt(0)}</FirstLetterSpan>
+                <span>{el.text.charAt(0)}</span>
                 {el.text.slice(1)}
               </Link>
             </ListItem>
@@ -67,8 +67,8 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  top: -100px;
-  right: -100px;
+  top: -120px;
+  right: -110px;
   width: 200px;
   height: 200px;
   z-index: 999999;
@@ -116,10 +116,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `;
 
-export const FirstLetterSpan = styled.span`
-  color: ${theme.colors.accent};
-`;
-
 const ListItem = styled.li`
   transition: all 0.3s ease;
   &:hover {
@@ -134,5 +130,8 @@ const Link = styled.a`
   transition: all 0.3s ease;
   &:hover {
     color: ${theme.colors.primaryFont};
+  }
+  span {
+    color: ${theme.colors.accent};
   }
 `;

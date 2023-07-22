@@ -26,25 +26,21 @@ export const Project = (props: ProjectPT) => {
 };
 
 const StyledProject = styled.div`
-  width: 30%;
-  max-width: 350px;
+  max-width: 320px;
   margin: 10px;
   background-color: ${theme.colors.primaryBg};
   border: 1px solid ${theme.colors.secondaryFort};
   text-align: left;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
 `;
 
 const ProjectImg = styled.img`
   height: 200px;
   width: 100%;
   object-fit: cover;
-  border: 1px solid ${theme.colors.secondaryFort};
 `;
 
-const ProjectTitle = styled.h3`
+const ProjectTitle = styled.h4`
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 500;
@@ -66,4 +62,5 @@ const Buttons = styled.div`
 
 const ProjectTech = styled(ProjectText)`
   border-bottom: 1px solid ${theme.colors.secondaryFort};
+  border-top: 1px solid ${theme.colors.secondaryFort};
 `;

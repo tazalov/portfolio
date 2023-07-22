@@ -30,4 +30,5 @@ const SkillTitle = styled.h4`
   ${font({ weight: 600, lineHeight: 1.2, Fmax: 20, Fmin: 14 })}
   text-transform: uppercase;
   max-width: 140px;
+  margin-top: 10px;
 `;

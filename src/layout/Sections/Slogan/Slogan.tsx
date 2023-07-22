@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 import { SectionSubtitle } from "../../../components/SectionSubtitle/SectionSubtitle";
