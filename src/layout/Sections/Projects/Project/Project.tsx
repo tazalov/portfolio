@@ -8,6 +8,8 @@ type ProjectPT = {
   text: string;
   img: string;
   tech: string;
+  demoLink: string;
+  codeLink: string;
 };
 
 export const Project = (props: ProjectPT) => {
@@ -18,20 +20,26 @@ export const Project = (props: ProjectPT) => {
       <ProjectTitle>{props.title}</ProjectTitle>
       <ProjectText>{props.text}</ProjectText>
       <Buttons>
-        <Link demo>&lt;demo/&gt;</Link>
-        <Link>&lt;code/&gt;</Link>
+        <Link href={props.demoLink} target={"_blank"} demo>
+          &lt;demo/&gt;
+        </Link>
+        <Link href={props.codeLink} target={"_blank"}>
+          &lt;code/&gt;
+        </Link>
       </Buttons>
     </StyledProject>
   );
 };
 
 const StyledProject = styled.div`
-  max-width: 320px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
   margin: 10px;
   background-color: white;
   text-align: left;
   z-index: 2;
-  padding: 20px;
+  padding: 10px;
   position: relative;
   &:before {
     content: "";
@@ -63,12 +71,12 @@ const ProjectText = styled.p`
   font-weight: 400;
   padding: 8px;
   color: ${theme.colors.secondaryFort};
-  line-height: 32px;
+  margin-bottom: 10px;
 `;
 
 const Buttons = styled.div`
-  margin: auto 0 10px 0;
-  padding: 10px;
+  margin-top: auto;
+  padding: 5px;
 `;
 
 const ProjectTech = styled(ProjectText)`

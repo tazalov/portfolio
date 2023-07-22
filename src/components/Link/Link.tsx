@@ -7,7 +7,7 @@ type LinkPT = {
 
 export const Link = styled.a<LinkPT>`
   text-align: center;
-  padding: 8px 16px;
+  padding: 8px;
   margin-right: 10px;
   transition: all 0.3s ease;
   border: 1px solid

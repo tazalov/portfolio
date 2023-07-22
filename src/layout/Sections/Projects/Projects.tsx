@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
-import styled, { css } from "styled-components";
+import React, { useState } from "react";
+import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 import { Menu } from "./Menu/Menu";
 import { FlexWrapper } from "../../../components/FlexWrapper/FlexWrapper";
 import { Project } from "./Project/Project";
-import anynft from "../../../assets/img/project_logo.webp";
+import anynft from "../../../assets/img/anynft.webp";
+import carrepair from "../../../assets/img/carrepair.webp";
+import portfolio from "../../../assets/img/photo.webp";
+import social from "../../../assets/img/social.webp";
 import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/Theme";
 
 export type TabT = {
   id: number;
@@ -26,51 +28,43 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
-      tech: "react, redux, html,css",
-      photo: "asd",
+      tech: "html, css, js, adaptive",
+      photo: anynft,
       title: "ANY NFT",
-      text: "text",
+      text: "Excellent landing page, own design. It was developed on gulp.",
       tabName: "landing",
+      demoLink: "https://tazalov.github.io/anynft/",
+      codeLink: "https://github.com/tazalov/anynft",
     },
     {
-      id: 5,
-      tech: "react, redux, html,css",
-      photo: "asd",
-      title: "ANY NFT",
-      text: "text",
+      id: 2,
+      tech: "html, css, js, no-adaptive",
+      photo: carrepair,
+      title: "CAR REPAIR",
+      text: "Layout according to the finished layout. Without adaptive.",
+      tabName: "landing",
+      demoLink: "https://tazalov.github.io/carrepair",
+      codeLink: "https://github.com/tazalov/carrepair",
+    },
+    {
+      id: 20,
+      tech: "react, typescript, styled components",
+      photo: portfolio,
+      title: "PORTFOLIO",
+      text: "The landing page is developed on React. You see him now.",
       tabName: "react",
+      demoLink: "#1",
+      codeLink: "https://github.com/tazalov/portfolio",
     },
     {
-      id: 6,
-      tech: "react, redux, html,css",
-      photo: "asd",
-      title: "ANY NFT",
-      text: "text",
-      tabName: "react",
-    },
-    {
-      id: 10,
-      tech: "react, spa",
-      photo: "asd",
-      title: "ANY NFT",
-      text: "text",
+      id: 40,
+      tech: "react, redux, styled & class component, formik, axios, websocket, typescript",
+      photo: social,
+      title: "SOCIAL NETWORK",
+      text: "The API is unfinished, everything that is possible has been implemented.Use: free@samuraijs.com:free",
       tabName: "spa",
-    },
-    {
-      id: 11,
-      tech: "react, spa",
-      photo: "asd",
-      title: "social",
-      text: "text",
-      tabName: "spa",
-    },
-    {
-      id: 12,
-      tech: "react, spa",
-      photo: "asd",
-      title: "network",
-      text: "text",
-      tabName: "spa",
+      demoLink: "https://tazalov.github.io/samurai_social",
+      codeLink: "https://github.com/tazalov/samurai_social",
     },
   ];
   const [filter, setFilter] = useState<FilterT>("all");
@@ -110,14 +104,16 @@ export const Projects = () => {
           <span>;</span>
         </SectionTitle>
         <Menu tabItems={tabItems} changeFilter={changeFilter} filter={filter} />
-        <BorderWrapper wrap={"wrap"} justify={"center"} relative>
+        <BorderWrapper wrap={"wrap"} justify={"flex-start"} relative>
           {filteredProjects.map((el) => (
             <Project
               key={el.id}
               tech={el.tech}
               title={el.title}
               text={el.text}
-              img={anynft}
+              img={el.photo || anynft}
+              demoLink={el.demoLink}
+              codeLink={el.codeLink}
             />
           ))}
         </BorderWrapper>
