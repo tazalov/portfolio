@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { Link } from "react-scroll";
 
 export type MenuItemT = {
   id: number;
@@ -22,11 +23,15 @@ export const MobileMenu = (props: MenuPT) => {
       <MobileMenuWrapper isOpen={menuOpen} onClick={() => setMenuOpen(false)}>
         <ul>
           {props.items.map((el) => (
-            <ListItem key={el.id} onClick={() => setMenuOpen(false)}>
-              <Link href={`#${el.text}`}>
+            <ListItem key={el.id}>
+              <MyLink
+                to={`${el.text}`}
+                smooth={true}
+                onClick={() => setMenuOpen(false)}
+              >
                 <span>#</span>
                 {el.text}
-              </Link>
+              </MyLink>
             </ListItem>
           ))}
         </ul>
@@ -55,7 +60,6 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: block;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -122,7 +126,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
 const ListItem = styled.li``;
 
-const Link = styled.a`
+const MyLink = styled(Link)`
   font-size: 32px;
   font-weight: 500;
   color: ${theme.colors.secondaryFort};

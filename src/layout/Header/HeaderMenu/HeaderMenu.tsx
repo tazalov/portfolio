@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { Link } from "react-scroll";
 
 export type MenuItemT = {
   id: number;
@@ -14,13 +15,28 @@ type MenuPT = {
 export const HeaderMenu = (props: MenuPT) => {
   return (
     <StyledHeaderMenu>
+      {/*      <Link
+        activeClass="active"
+        spy={true}
+        hashSpy={true}
+        offset={50}
+        duration={500}
+        delay={1000}
+        isDynamic={true}
+        onSetActive={this.handleSetActive}
+        onSetInactive={this.handleSetInactive}
+        ignoreCancelEvents={false}
+        spyThrottle={500}
+      >
+        Your name
+      </Link>*/}
       <ul>
         {props.items.map((el) => (
           <ListItem key={el.id}>
-            <Link href={`#${el.text}`}>
+            <MyLink to={`${el.text}`} smooth={true}>
               <span>#</span>
               {el.text}
-            </Link>
+            </MyLink>
           </ListItem>
         ))}
       </ul>
@@ -45,7 +61,7 @@ const ListItem = styled.li`
   }
 `;
 
-const Link = styled.a`
+const MyLink = styled(Link)`
   font-size: 25px;
   font-weight: 500;
   color: ${theme.colors.secondaryFort};
