@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 import { Menu } from "./Menu/Menu";
 import { FlexWrapper } from "../../../components/FlexWrapper/FlexWrapper";
 import { Project } from "./Project/Project";
 import anynft from "../../../assets/img/project_logo.webp";
 import { Container } from "../../../components/Container";
-import { AbsoluteIcon } from "../../../components/AbsoluteIcon";
-import { Icon } from "../../../components/Icon/Icon";
 import { theme } from "../../../styles/Theme";
 
 export type TabT = {
@@ -105,36 +103,14 @@ export const Projects = () => {
     <StyledProjects id={"projects"}>
       <Container>
         <SectionTitle>
-          <span>&lt;</span>
-          <code>Projects</code>
-          <span>&gt;</span>
+          <span>import </span>
+          <i>p</i>
+          <span> from </span>
+          <code>'../Projects'</code>
+          <span>;</span>
         </SectionTitle>
         <Menu tabItems={tabItems} changeFilter={changeFilter} filter={filter} />
         <BorderWrapper wrap={"wrap"} justify={"center"} relative>
-          {/*          <AbsoluteIcon top={"0"} left={"-5%"}>
-            <Icon
-              iconId={"logo"}
-              width={"156"}
-              height={"156"}
-              viewBox={"0 0 156 156"}
-            />
-          </AbsoluteIcon>
-          <AbsoluteIcon bottom={"-10%"} right={"-10%"}>
-            <Icon
-              iconId={"square"}
-              width={"86"}
-              height={"86"}
-              viewBox={"0 0 86 86"}
-            />
-          </AbsoluteIcon>
-          <AbsoluteIcon bottom={"-10%"} right={"-10%"}>
-            <Icon
-              iconId={"square-big"}
-              width={"186"}
-              height={"186"}
-              viewBox={"0 0 186 186"}
-            />
-          </AbsoluteIcon>*/}
           {filteredProjects.map((el) => (
             <Project
               key={el.id}
@@ -145,11 +121,7 @@ export const Projects = () => {
             />
           ))}
         </BorderWrapper>
-        <SectionTitle>
-          <span>&lt;/</span>
-          <code>Projects</code>
-          <span>&gt;</span>
-        </SectionTitle>
+        <SectionTitle></SectionTitle>
       </Container>
     </StyledProjects>
   );
@@ -158,5 +130,7 @@ export const Projects = () => {
 const StyledProjects = styled.section``;
 
 const BorderWrapper = styled(FlexWrapper)`
-  border: 1px solid ${theme.colors.secondaryFort};
+  background-color: #ffca28;
+  border-radius: 0 10px 10px 10px;
+  padding: 20px;
 `;

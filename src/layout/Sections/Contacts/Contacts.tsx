@@ -4,8 +4,6 @@ import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 import { Link } from "../../../components/Link/Link";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
-import { AbsoluteIcon } from "../../../components/AbsoluteIcon";
-import { Icon } from "../../../components/Icon/Icon";
 
 export const Contacts = () => {
   return (
@@ -24,38 +22,6 @@ export const Contacts = () => {
           <span>&gt;</span>
         </ContactsTitle>
         <StyledForm>
-          {/*<AbsoluteIcon top={"50%"} left={"-5%"}>
-            <Icon
-              iconId={"dots"}
-              width={"86"}
-              height={"86"}
-              viewBox={"0 0 86 86"}
-            />
-          </AbsoluteIcon>
-          <AbsoluteIcon top={"-15%"} right={"-8%"}>
-            <Icon
-              iconId={"x"}
-              width={"108"}
-              height={"107"}
-              viewBox={"0 0 108 107"}
-            />
-          </AbsoluteIcon>
-          <AbsoluteIcon top={"-10%"} left={"-8%"}>
-            <Icon
-              iconId={"quotes"}
-              width={"50"}
-              height={"50"}
-              viewBox={"0 0 50 50"}
-            />
-          </AbsoluteIcon>
-          <AbsoluteIcon bottom={"-10%"} right={"-8%"}>
-            <Icon
-              iconId={"quotes"}
-              width={"50"}
-              height={"50"}
-              viewBox={"0 0 50 50"}
-            />
-          </AbsoluteIcon>*/}
           <StyledField placeholder={"Name"} />
           <StyledField placeholder={"Email"} />
           <StyledField placeholder={"Title"} />

@@ -14,7 +14,7 @@ export const Footer = () => {
           <Bracket>
             <span>const</span> socialLinks =<span>[</span>
           </Bracket>
-          <SocialLink>
+          <SocialLink href={"mailto:tazalov9@gmail.com"}>
             <Icon
               iconId={"email"}
               width={"30px"}
@@ -22,7 +22,7 @@ export const Footer = () => {
               viewBox={"0 0 50 50"}
             />
           </SocialLink>
-          <SocialLink>
+          <SocialLink href={"https://github.com/tazalov"}>
             <Icon
               iconId={"gitHub"}
               width={"30px"}
@@ -30,7 +30,7 @@ export const Footer = () => {
               viewBox={"0 0 50 50"}
             />
           </SocialLink>
-          <SocialLink>
+          <SocialLink href={"mailto:tazalov9@gmail.com"}>
             <Icon
               iconId={"linkedIn"}
               width={"30px"}
@@ -38,7 +38,7 @@ export const Footer = () => {
               viewBox={"0 0 50 50"}
             />
           </SocialLink>
-          <SocialLink>
+          <SocialLink href={"https://t.me/tazalov9"}>
             <Icon
               iconId={"telegram"}
               width={"30px"}

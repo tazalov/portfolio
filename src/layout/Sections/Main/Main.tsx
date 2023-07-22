@@ -4,10 +4,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper/FlexWrapper";
 import styled, { keyframes } from "styled-components";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
-import { AbsoluteIcon } from "../../../components/AbsoluteIcon";
-import { Icon } from "../../../components/Icon/Icon";
 import { SectionSubtitle } from "../../../components/SectionSubtitle/SectionSubtitle";
-import { font } from "../../../styles/Common";
 import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 
 export const Main = () => {
@@ -45,14 +42,6 @@ export const Main = () => {
           </MainText>
           <MainPhoto>
             <img src={photo} alt="" />
-            {/*            <AbsoluteIcon top={"0"} left={"-10%"}>
-              <Icon
-                iconId={"logo"}
-                width={"156"}
-                height={"156"}
-                viewBox={"0 0 156 156"}
-              />
-            </AbsoluteIcon>*/}
           </MainPhoto>
         </FlexWrapper>
       </Container>
@@ -78,9 +67,10 @@ const MainPhoto = styled.div`
   position: relative;
   z-index: 2;
   img {
-    max-width: 378px;
+    max-width: 400px;
     height: auto;
     width: 100%;
+    border-radius: 50%;
   }
 `;
 

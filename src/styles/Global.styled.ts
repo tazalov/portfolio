@@ -77,4 +77,7 @@ export const GlobalStyle = createGlobalStyle`
   i {
     font-style: normal;
   }
+  q {
+    quotes: none;
+  }
 `;

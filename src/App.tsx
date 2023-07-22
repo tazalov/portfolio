@@ -12,10 +12,10 @@ function App() {
     <StyledApp>
       <Header />
       <Main />
-      <Slogan />
       <Skills />
       <Projects />
       <Contacts />
+      <Slogan />
       <Footer />
     </StyledApp>
   );
