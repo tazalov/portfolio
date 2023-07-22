@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { theme } from "../../styles/Theme";
 
 type FlexWrapperPT = {
   direction?: string;
@@ -22,4 +23,10 @@ export const FlexWrapper = styled.div<FlexWrapperPT>`
     css`
       position: relative;
     `};
+  @media ${theme.media.tablet} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;

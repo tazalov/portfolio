@@ -14,10 +14,10 @@ type MenuPT = {
 export const MobileMenu = (props: MenuPT) => {
   return (
     <StyledMobileMenu>
-      <BurgerButton isOpen={true}>
+      <BurgerButton isOpen={false}>
         <span></span>
       </BurgerButton>
-      <MobileMenuWrapper isOpen={true}>
+      <MobileMenuWrapper isOpen={false}>
         <ul>
           {props.items.map((el) => (
             <ListItem key={el.id}>

@@ -24,7 +24,7 @@ export const Projects = () => {
         </SectionTitle>
         <Menu items={menuItems} />
         <FlexWrapper wrap={"wrap"} justify={"center"} relative>
-          <AbsoluteIcon top={"0"} left={"-5%"}>
+          {/*          <AbsoluteIcon top={"0"} left={"-5%"}>
             <Icon
               iconId={"logo"}
               width={"156"}
@@ -47,7 +47,7 @@ export const Projects = () => {
               height={"186"}
               viewBox={"0 0 186 186"}
             />
-          </AbsoluteIcon>
+          </AbsoluteIcon>*/}
           <Project
             tech={"React, Redux, Styled component"}
             title={"ANY NFT"}

@@ -7,6 +7,7 @@ import { theme } from "../../../styles/Theme";
 import { AbsoluteIcon } from "../../../components/AbsoluteIcon";
 import { Icon } from "../../../components/Icon/Icon";
 import { SectionSubtitle } from "../../../components/SectionSubtitle/SectionSubtitle";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
@@ -34,20 +35,23 @@ export const Main = () => {
               </pre>
             </StyledH1>
             <SectionSubtitle>
-              He will do any tasks for you. He will even fix bugs left by other
+              He will do any tasks for you.
+              <br />
+              He will even fix bugs left by other
+              <br />
               developers as long as his heart beats.
             </SectionSubtitle>
           </MainText>
           <MainPhoto>
             <img src={photo} alt="" />
-            <AbsoluteIcon top={"0"} left={"-10%"}>
+            {/*            <AbsoluteIcon top={"0"} left={"-10%"}>
               <Icon
                 iconId={"logo"}
                 width={"156"}
                 height={"156"}
                 viewBox={"0 0 156 156"}
               />
-            </AbsoluteIcon>
+            </AbsoluteIcon>*/}
           </MainPhoto>
         </FlexWrapper>
       </Container>
@@ -59,26 +63,28 @@ const StyledMain = styled.section`
   min-height: 100vh;
   display: flex;
   position: relative;
+  @media ${theme.media.tablet} {
+    min-height: 90vh;
+  }
+  @media ${theme.media.mobile} {
+    min-height: 80vh;
+  }
 `;
 
-const MainText = styled.div`
-  max-width: 650px;
-  width: 100%;
-  margin-right: 20px;
-  padding: 0 20px;
-`;
+const MainText = styled.div``;
+
 const MainPhoto = styled.div`
   position: relative;
   z-index: 2;
   img {
-    max-width: 350px;
+    max-width: 378px;
+    height: auto;
+    width: 100%;
   }
 `;
 
 const StyledH1 = styled.h1`
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 50px;
+  ${font({ weight: 600, lineHeight: "60px", Fmax: 40, Fmin: 18 })}
   margin-bottom: 32px;
   span {
     color: ${theme.colors.accent};

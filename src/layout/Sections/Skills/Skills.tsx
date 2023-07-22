@@ -20,7 +20,7 @@ export const Skills = () => {
             content={"flex-start"}
             relative
           >
-            <AbsoluteIcon bottom={"-5%"} right={"-5%"}>
+            {/*            <AbsoluteIcon bottom={"-5%"} right={"-5%"}>
               <Icon
                 iconId={"dots"}
                 width={"86"}
@@ -35,7 +35,7 @@ export const Skills = () => {
                 height={"107"}
                 viewBox={"0 0 108 107"}
               />
-            </AbsoluteIcon>
+            </AbsoluteIcon>*/}
             <SkillArray>
               <span>const</span> skillsArray = <span>[</span>
             </SkillArray>

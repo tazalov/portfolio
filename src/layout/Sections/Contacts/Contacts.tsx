@@ -19,7 +19,7 @@ export const Contacts = () => {
           <span>&gt;</span>
         </ContactsTitle>
         <StyledForm>
-          <AbsoluteIcon top={"50%"} left={"-5%"}>
+          {/*<AbsoluteIcon top={"50%"} left={"-5%"}>
             <Icon
               iconId={"dots"}
               width={"86"}
@@ -50,7 +50,7 @@ export const Contacts = () => {
               height={"50"}
               viewBox={"0 0 50 50"}
             />
-          </AbsoluteIcon>
+          </AbsoluteIcon>*/}
           <StyledField placeholder={"Name"} />
           <StyledField placeholder={"Email"} />
           <StyledField placeholder={"Title"} />
