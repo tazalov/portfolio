@@ -9,8 +9,8 @@ function App() {
       <Main />
       <Skills />
       <Projects />
-      <Contacts />
-      <Slogan />
+      {/*      <Contacts />
+      <Slogan />*/}
       <Footer />
     </>
   )
