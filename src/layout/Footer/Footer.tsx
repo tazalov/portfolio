@@ -1,10 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "../../components/Container";
-import { FlexWrapper } from "../../components/FlexWrapper/FlexWrapper";
-import { Icon } from "../../components/Icon/Icon";
-import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
-import { theme } from "../../styles/Theme";
+import styled from 'styled-components'
+import { Icon } from '../../components/Icon/Icon'
+import { Container, SectionTitle } from '../../components/styled'
+import { theme } from '../../styles/Theme'
 
 export const Footer = () => {
   return (
@@ -14,37 +11,17 @@ export const Footer = () => {
           <Bracket>
             <span>const</span> socialLinks =<span>[</span>
           </Bracket>
-          <SocialLink href={"mailto:tazalov9@gmail.com"}>
-            <Icon
-              iconId={"email"}
-              width={"30px"}
-              height={"30px"}
-              viewBox={"0 0 50 50"}
-            />
+          <SocialLink href={'mailto:tazalov9@gmail.com'}>
+            <Icon iconId={'email'} width={'30px'} height={'30px'} viewBox={'0 0 50 50'} />
           </SocialLink>
-          <SocialLink href={"https://github.com/tazalov"}>
-            <Icon
-              iconId={"gitHub"}
-              width={"30px"}
-              height={"30px"}
-              viewBox={"0 0 50 50"}
-            />
+          <SocialLink href={'https://github.com/tazalov'}>
+            <Icon iconId={'gitHub'} width={'30px'} height={'30px'} viewBox={'0 0 50 50'} />
           </SocialLink>
-          <SocialLink href={"mailto:tazalov9@gmail.com"}>
-            <Icon
-              iconId={"linkedIn"}
-              width={"30px"}
-              height={"30px"}
-              viewBox={"0 0 50 50"}
-            />
+          <SocialLink href={'mailto:tazalov9@gmail.com'}>
+            <Icon iconId={'linkedIn'} width={'30px'} height={'30px'} viewBox={'0 0 50 50'} />
           </SocialLink>
-          <SocialLink href={"https://t.me/tazalov9"}>
-            <Icon
-              iconId={"telegram"}
-              width={"30px"}
-              height={"30px"}
-              viewBox={"0 0 50 50"}
-            />
+          <SocialLink href={'https://t.me/tazalov9'}>
+            <Icon iconId={'telegram'} width={'30px'} height={'30px'} viewBox={'0 0 50 50'} />
           </SocialLink>
 
           <Bracket>
@@ -53,27 +30,27 @@ export const Footer = () => {
         </SocialBlock>
       </Container>
     </StyledFooter>
-  );
-};
+  )
+}
 
 const StyledFooter = styled.footer`
   padding: 20px;
   font-size: 20px;
-`;
+`
 
 const SocialBlock = styled.div`
   justify-content: center;
   display: flex;
   align-items: center;
-`;
+`
 
 const SocialLink = styled.a`
   padding: 5px;
-`;
+`
 
 const Bracket = styled(SectionTitle)`
   margin: 0;
   @media ${theme.media.tablet} {
     display: none;
   }
-`;
+`

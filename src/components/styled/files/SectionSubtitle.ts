@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { theme } from "../../styles/Theme";
-import { font } from "../../styles/Common";
+import styled from 'styled-components'
+import { font } from '../../../styles/Common'
+import { theme } from '../../../styles/Theme'
 
 export const SectionSubtitle = styled.h3`
   ${font({
@@ -11,4 +11,4 @@ export const SectionSubtitle = styled.h3`
   })}
   width: 100%;
   margin: 20px 0;
-`;
+`

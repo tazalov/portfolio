@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import { theme } from "../../../styles/Theme";
-import { Link } from "react-scroll";
+import { useState } from 'react'
+import { Link } from 'react-scroll'
+import styled, { css } from 'styled-components'
+import { theme } from '../../../styles/Theme'
 
 export type MenuItemT = {
-  id: number;
-  text: string;
-};
+  id: number
+  text: string
+}
 
 type MenuPT = {
-  items: MenuItemT[];
-};
+  items: MenuItemT[]
+}
 
-export const MobileMenu = (props: MenuPT) => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const openMenu = () => setMenuOpen(!menuOpen);
+export const MobileMenu = ({ items }: MenuPT) => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const openMenu = () => setMenuOpen(!menuOpen)
   return (
     <StyledMobileMenu>
       <BurgerButton isOpen={menuOpen} onClick={openMenu}>
@@ -22,13 +22,9 @@ export const MobileMenu = (props: MenuPT) => {
       </BurgerButton>
       <MobileMenuWrapper isOpen={menuOpen} onClick={() => setMenuOpen(false)}>
         <ul>
-          {props.items.map((el) => (
+          {items.map(el => (
             <ListItem key={el.id}>
-              <MyLink
-                to={`${el.text}`}
-                smooth={true}
-                onClick={() => setMenuOpen(false)}
-              >
+              <MyLink to={`${el.text}`} smooth={true} onClick={() => setMenuOpen(false)}>
                 <span>#</span>
                 {el.text}
               </MyLink>
@@ -37,15 +33,15 @@ export const MobileMenu = (props: MenuPT) => {
         </ul>
       </MobileMenuWrapper>
     </StyledMobileMenu>
-  );
-};
+  )
+}
 
 const StyledMobileMenu = styled.nav`
   display: none;
   @media ${theme.media.tablet} {
     display: block;
   }
-`;
+`
 
 const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   position: fixed;
@@ -57,7 +53,7 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   background-color: ${theme.colors.secondaryBg};
   display: none;
   transition: all 0.3s ease-out;
-  ${(props) =>
+  ${props =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
       display: flex;
@@ -71,7 +67,7 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
     justify-content: center;
     gap: 30px;
   }
-`;
+`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
@@ -88,43 +84,43 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: absolute;
     left: 40px;
     bottom: 50px;
-    ${(props) =>
+    ${props =>
       props.isOpen &&
       css<{ isOpen: boolean }>`
         background-color: rgba(255, 255, 255, 0);
       `}
     &::before {
-      content: "";
+      content: '';
       display: block;
       width: 36px;
       height: 2px;
       background-color: ${theme.colors.accent};
       position: absolute;
       transform: translateY(-10px);
-      ${(props) =>
+      ${props =>
         props.isOpen &&
         css<{ isOpen: boolean }>`
           transform: translateY(0) rotate(45deg);
         `}
     }
     &::after {
-      content: "";
+      content: '';
       display: block;
       width: 36px;
       height: 2px;
       background-color: ${theme.colors.accent};
       position: absolute;
       transform: translateY(10px);
-      ${(props) =>
+      ${props =>
         props.isOpen &&
         css<{ isOpen: boolean }>`
           transform: translateY(0) rotate(-45deg);
         `}
     }
   }
-`;
+`
 
-const ListItem = styled.li``;
+const ListItem = styled.li``
 
 const MyLink = styled(Link)`
   font-size: 32px;
@@ -137,4 +133,4 @@ const MyLink = styled(Link)`
   span {
     color: ${theme.colors.accent};
   }
-`;
+`

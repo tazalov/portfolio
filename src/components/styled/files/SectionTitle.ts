@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { theme } from "../../styles/Theme";
-import { font } from "../../styles/Common";
+import styled from 'styled-components'
+import { font } from '../../../styles/Common'
+import { theme } from '../../../styles/Theme'
 
 export const SectionTitle = styled.h2`
   color: ${theme.colors.primaryFont};
@@ -15,4 +15,4 @@ export const SectionTitle = styled.h2`
   i {
     color: ${theme.colors.thirdAccent};
   }
-`;
+`

@@ -1,29 +1,25 @@
-import React from "react";
-import photo from "../../../assets/img/photo.webp";
-import { FlexWrapper } from "../../../components/FlexWrapper/FlexWrapper";
-import styled, { keyframes } from "styled-components";
-import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/Theme";
-import { SectionSubtitle } from "../../../components/SectionSubtitle/SectionSubtitle";
-import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
+import styled, { keyframes } from 'styled-components'
+import photo from '../../../assets/img/photo.webp'
+import { Container, FlexWrapper, SectionSubtitle, SectionTitle } from '../../../components/styled'
+import { theme } from '../../../styles/Theme'
 
 export const Main = () => {
   return (
-    <StyledMain id={"home"}>
+    <StyledMain id={'home'}>
       <Container>
-        <FlexWrapper justify={"space-between"} align={"center"}>
+        <FlexWrapper justify={'space-between'} align={'center'}>
           <MainText>
             <SectionTitle>
               <pre>
                 <span>const</span> <code>dev</code> = <span>&#123;</span>
                 <br />
-                {"  "}
+                {'  '}
                 <i>name:</i> 'Iliya Tazalov',
                 <br />
-                {"  "}
+                {'  '}
                 <i>direction:</i> 'front-end',
                 <br />
-                {"  "}
+                {'  '}
                 <i>about:</i> 'one you need'
                 <br />
                 <span>
@@ -46,8 +42,8 @@ export const Main = () => {
         </FlexWrapper>
       </Container>
     </StyledMain>
-  );
-};
+  )
+}
 
 const StyledMain = styled.section`
   min-height: 100vh;
@@ -59,9 +55,9 @@ const StyledMain = styled.section`
   @media ${theme.media.mobile} {
     min-height: 80vh;
   }
-`;
+`
 
-const MainText = styled.div``;
+const MainText = styled.div``
 
 const MainPhoto = styled.div`
   position: relative;
@@ -72,7 +68,7 @@ const MainPhoto = styled.div`
     width: 100%;
     border-radius: 50%;
   }
-`;
+`
 
 const blinkAnimation = keyframes`
   0% {
@@ -84,9 +80,9 @@ const blinkAnimation = keyframes`
   100% {
     opacity: 1;
   }
-`;
+`
 
 export const Cursor = styled.abbr`
   color: ${theme.colors.primaryFont};
   animation: ${blinkAnimation} 1s infinite;
-`;
+`

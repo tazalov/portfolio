@@ -1,15 +1,10 @@
-import { Header } from "./layout/Header/Header";
-import { Main } from "./layout/Sections/Main/Main";
-import { Skills } from "./layout/Sections/Skills/Skills";
-import { Projects } from "./layout/Sections/Projects/Projects";
-import { Contacts } from "./layout/Sections/Contacts/Contacts";
-import { Slogan } from "./layout/Sections/Slogan/Slogan";
-import { Footer } from "./layout/Footer/Footer";
-import styled from "styled-components";
+import { Footer } from './layout/Footer/Footer'
+import { Header } from './layout/Header/Header'
+import { Contacts, Main, Projects, Skills, Slogan } from './layout/Sections'
 
 function App() {
   return (
-    <StyledApp>
+    <>
       <Header />
       <Main />
       <Skills />
@@ -17,10 +12,8 @@ function App() {
       <Contacts />
       <Slogan />
       <Footer />
-    </StyledApp>
-  );
+    </>
+  )
 }
 
-export default App;
-
-const StyledApp = styled.div``;
+export default App

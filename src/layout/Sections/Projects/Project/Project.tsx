@@ -1,35 +1,32 @@
-import React from "react";
-import styled from "styled-components";
-import { theme } from "../../../../styles/Theme";
-import { Link } from "../../../../components/Link/Link";
+import styled from 'styled-components'
+import { Link } from '../../../../components/styled'
+import { theme } from '../../../../styles/Theme'
 
 type ProjectPT = {
-  title: string;
-  text: string;
-  img: string;
-  tech: string;
-  demoLink: string;
-  codeLink: string;
-};
+  title: string
+  text: string
+  tech: string
+  demoLink: string
+  codeLink: string
+}
 
-export const Project = (props: ProjectPT) => {
+export const Project = ({ title, text, tech, demoLink, codeLink }: ProjectPT) => {
   return (
     <StyledProject>
-      <ProjectImg src={props.img} alt="img" />
-      <ProjectTech>{props.tech}</ProjectTech>
-      <ProjectTitle>{props.title}</ProjectTitle>
-      <ProjectText>{props.text}</ProjectText>
+      <ProjectTitle>{title}</ProjectTitle>
+      <ProjectTech>{tech}</ProjectTech>
+      <ProjectText>{text}</ProjectText>
       <Buttons>
-        <Link href={props.demoLink} target={"_blank"} demo>
+        <Link href={demoLink} target={'_blank'} demo>
           &lt;demo/&gt;
         </Link>
-        <Link href={props.codeLink} target={"_blank"}>
+        <Link href={codeLink} target={'_blank'}>
           &lt;code/&gt;
         </Link>
       </Buttons>
     </StyledProject>
-  );
-};
+  )
+}
 
 const StyledProject = styled.div`
   max-width: 300px;
@@ -42,7 +39,7 @@ const StyledProject = styled.div`
   padding: 10px;
   position: relative;
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -50,13 +47,7 @@ const StyledProject = styled.div`
     border-style: solid;
     border-color: ${theme.colors.secondaryFort} #ffca28;
   }
-`;
-
-const ProjectImg = styled.img`
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-`;
+`
 
 const ProjectTitle = styled.h4`
   text-transform: uppercase;
@@ -64,22 +55,25 @@ const ProjectTitle = styled.h4`
   font-weight: 600;
   padding: 8px;
   color: black;
-`;
+`
 
 const ProjectText = styled.p`
   font-size: 14px;
-  font-weight: 400;
+  line-height: 18px;
+  font-weight: 600;
   padding: 8px;
-  color: ${theme.colors.secondaryFort};
+  color: black;
   margin-bottom: 10px;
-`;
+`
 
 const Buttons = styled.div`
   margin-top: auto;
   padding: 5px;
-`;
+  font-weight: 600;
+`
 
 const ProjectTech = styled(ProjectText)`
   border-bottom: 1px solid ${theme.colors.secondaryFort};
   border-top: 1px solid ${theme.colors.secondaryFort};
-`;
+  color: ${theme.colors.secondaryFort};
+`

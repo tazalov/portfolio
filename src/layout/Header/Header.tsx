@@ -1,30 +1,28 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "../../components/Container";
-import { FlexWrapper } from "../../components/FlexWrapper/FlexWrapper";
-import { HeaderMenu } from "./HeaderMenu/HeaderMenu";
-import { theme } from "../../styles/Theme";
-import { MobileMenu } from "./MobileMenu/MobileMenu";
+import styled from 'styled-components'
+import { Container, FlexWrapper } from '../../components/styled'
+import { theme } from '../../styles/Theme'
+import { HeaderMenu } from './HeaderMenu/HeaderMenu'
+import { MobileMenu } from './MobileMenu/MobileMenu'
 
 const menuItems = [
-  { id: 1, text: "home" },
-  { id: 2, text: "skills" },
-  { id: 3, text: "projects" },
-  { id: 4, text: "contacts" },
-];
+  { id: 1, text: 'home' },
+  { id: 2, text: 'skills' },
+  { id: 3, text: 'projects' },
+  { id: 4, text: 'contacts' },
+]
 
 export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper justify={"center"} align={"center"}>
+        <FlexWrapper justify={'center'} align={'center'}>
           <HeaderMenu items={menuItems} />
           <MobileMenu items={menuItems} />
         </FlexWrapper>
       </Container>
     </StyledHeader>
-  );
-};
+  )
+}
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -35,4 +33,4 @@ const StyledHeader = styled.header`
   z-index: 10000;
   height: 50px;
   padding: 5px;
-`;
+`
