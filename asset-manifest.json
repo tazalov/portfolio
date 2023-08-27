@@ -1,17 +1,14 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.1f5fe133.js",
+    "main.js": "/portfolio/static/js/main.d5b091c9.js",
     "static/js/787.25eaef86.chunk.js": "/portfolio/static/js/787.25eaef86.chunk.js",
-    "static/media/anynft.webp": "/portfolio/static/media/anynft.7f9ed0309c774a6b3ef3.webp",
     "static/media/photo.webp": "/portfolio/static/media/photo.3895e6ae0afaf53a8ced.webp",
-    "static/media/carrepair.webp": "/portfolio/static/media/carrepair.5faf1d35741a0df22060.webp",
     "static/media/icons-sprite.svg": "/portfolio/static/media/icons-sprite.d63a35cf5e6c0496282e28d53fbb94c4.svg",
-    "static/media/social.webp": "/portfolio/static/media/social.5a4cb94822da495e87dc.webp",
     "index.html": "/portfolio/index.html",
-    "main.1f5fe133.js.map": "/portfolio/static/js/main.1f5fe133.js.map",
+    "main.d5b091c9.js.map": "/portfolio/static/js/main.d5b091c9.js.map",
     "787.25eaef86.chunk.js.map": "/portfolio/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1f5fe133.js"
+    "static/js/main.d5b091c9.js"
   ]
 }
