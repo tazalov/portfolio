@@ -48,12 +48,12 @@ export const Projects = () => {
     },
     {
       id: 4,
-      tech: 'REACT (legacy), TS, REDUX, WORK WITH API, WEBSOCKET',
+      tech: 'REACT (Class components, HOC), TS, REDUX, axios',
       title: 'SOCIAL NETWORK',
       text: 'The third-party API is not complete, but it looks cool. To log in, you can use: free@samuraijs.com:free',
       tabName: 'spa',
-      demoLink: 'https://tazalov.github.io/samurai_social',
-      codeLink: 'https://github.com/tazalov/samurai_social',
+      demoLink: 'https://tazalov.github.io/social_ts',
+      codeLink: 'https://github.com/tazalov/social_ts',
     },
     {
       id: 5,
