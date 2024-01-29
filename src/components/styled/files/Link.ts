@@ -8,7 +8,7 @@ type LinkPT = {
 export const Link = styled.a<LinkPT>`
   text-align: center;
   padding: 8px;
-  margin-right: 10px;
+  margin-right: 5px;
   transition: all 0.3s ease;
   border: 1px solid ${props => (props.demo ? theme.colors.accent : theme.colors.secondaryFort)};
   color: ${props => (props.demo ? theme.colors.accent : theme.colors.secondaryFort)};

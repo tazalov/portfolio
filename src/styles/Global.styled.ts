@@ -68,12 +68,6 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: inherit;
     font-size: inherit;
   }
-  section {
-    padding: 100px 0;
-    @media ${theme.media.tablet} {
-      padding: 50px 0;
-    }
-  }
   i {
     font-style: normal;
   }

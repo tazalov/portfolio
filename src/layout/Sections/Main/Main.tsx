@@ -7,8 +7,8 @@ export const Main = () => {
   return (
     <StyledMain id={'home'}>
       <Container>
-        <FlexWrapper justify={'space-between'} align={'center'}>
-          <MainText>
+        <StyledDev justify={'space-between'} align={'center'}>
+          <div>
             <SectionTitle>
               <pre>
                 <span>const</span> <code>dev</code> = <span>&#123;</span>
@@ -35,11 +35,11 @@ export const Main = () => {
               <br />
               developers as long as his heart beats. */
             </SectionSubtitle>
-          </MainText>
+          </div>
           <MainPhoto>
             <img src={photo} alt="" />
           </MainPhoto>
-        </FlexWrapper>
+        </StyledDev>
       </Container>
     </StyledMain>
   )
@@ -57,7 +57,14 @@ const StyledMain = styled.section`
   }
 `
 
-const MainText = styled.div``
+const StyledDev = styled(FlexWrapper)`
+  @media ${theme.media.tablet} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`
 
 const MainPhoto = styled.div`
   position: relative;

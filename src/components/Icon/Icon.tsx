@@ -13,7 +13,7 @@ export const Icon = ({ width, height, viewBox, iconId }: IconPT) => {
       width={width || '50'}
       height={height || '50'}
       viewBox={viewBox || '0 0 50 50'}
-      fill="none"
+      fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use xlinkHref={`${iconsSprite}#${iconId}`} />

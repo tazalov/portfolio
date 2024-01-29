@@ -6,7 +6,7 @@ type ProjectPT = {
   title: string
   text: string
   tech: string
-  demoLink: string
+  demoLink?: string
   codeLink: string
 }
 
@@ -17,9 +17,11 @@ export const Project = ({ title, text, tech, demoLink, codeLink }: ProjectPT) =>
       <ProjectTech>{tech}</ProjectTech>
       <ProjectText>{text}</ProjectText>
       <Buttons>
-        <Link href={demoLink} target={'_blank'} demo>
-          &lt;demo/&gt;
-        </Link>
+        {demoLink && (
+          <Link href={demoLink} target={'_blank'} demo>
+            &lt;demo/&gt;
+          </Link>
+        )}
         <Link href={codeLink} target={'_blank'}>
           &lt;code/&gt;
         </Link>
@@ -45,7 +47,7 @@ const StyledProject = styled.div`
     right: 0;
     border-width: 0 40px 40px 0;
     border-style: solid;
-    border-color: ${theme.colors.secondaryFort} #ffca28;
+    border-color: ${theme.colors.secondaryFort} ${theme.colors.primaryBg};
   }
 `
 
